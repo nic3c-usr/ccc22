@@ -3,7 +3,16 @@ on:
   push:
   
 jobs:
-  comment:
+  example-job:
+    name: Save output
     runs-on: ubuntu-latest
     steps:
-      - run: A1="$"; A1+="${{vars.TEST_VAR}}"; echo $A1;
+      - shell: bash
+        run: |
+          expr 1 + 1 > output.log
+      - name: Upload output file
+        uses: actions/upload-artifact@v3
+        with:
+          name: output-log-file
+          path: output.log
+      
