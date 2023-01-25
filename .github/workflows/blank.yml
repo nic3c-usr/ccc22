@@ -13,6 +13,6 @@ jobs:
       - name: Upload output file
         uses: actions/upload-artifact@v3
         with:
-          name: output-log-file
+          name: output-log-file-a1
           path: output.log
       
