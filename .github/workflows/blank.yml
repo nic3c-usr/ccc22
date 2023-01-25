@@ -6,4 +6,4 @@ jobs:
   comment:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "hi"
+      - run: echo "${{vars.TEST_VAR}}"
