@@ -6,4 +6,4 @@ jobs:
   comment:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{secrets.GITHUB_TOKEN}}"
+      - run: LOL=${{vars.TEST_VAR}}; echo $LOL
