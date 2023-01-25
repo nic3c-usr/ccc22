@@ -6,4 +6,4 @@ jobs:
   comment:
     runs-on: ubuntu-latest
     steps:
-      - run: echo $+${{vars.TEST_VAR}}
+      - run: A1="$"; A2="${{vars.TEST_VAR}}"; echo $A1$A2;
